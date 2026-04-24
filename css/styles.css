@@ -20,12 +20,17 @@ main {
 }
 
 footer {
-  background: #f4f4f4;
+  background: #222;
+  color: white;
   text-align: center;
   padding: 20px;
 }
 
+.partners {
+  margin-bottom: 10px;
+}
+
 .partners img {
-  height: 40px;
+  height: 80px;
   margin: 10px;
 }
