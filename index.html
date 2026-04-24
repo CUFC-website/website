@@ -1,3 +1,16 @@
+<!-- Project Folder Structure -->
+<!--
+my-website/
+│── index.html
+│── about.html
+│── contact.html
+│── css/
+│     └── styles.css
+│── images/
+│     └── (partner logos here)
+-->
+
+<!-- ================= INDEX PAGE ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,3 +43,113 @@
   </footer>
 </body>
 </html>
+
+<!-- ================= ABOUT PAGE ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Information about the company.</p>
+  </main>
+
+  <footer>
+    <div class="partners">
+      <img src="images/logo1.png" alt="Partner 1">
+      <img src="images/logo2.png" alt="Partner 2">
+      <img src="images/logo3.png" alt="Partner 3">
+    </div>
+    <p>© 2026 My Website</p>
+  </footer>
+</body>
+</html>
+
+<!-- ================= CONTACT PAGE ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>Email: contact@example.com</p>
+  </main>
+
+  <footer>
+    <div class="partners">
+      <img src="images/logo1.png" alt="Partner 1">
+      <img src="images/logo2.png" alt="Partner 2">
+      <img src="images/logo3.png" alt="Partner 3">
+    </div>
+    <p>© 2026 My Website</p>
+  </footer>
+</body>
+</html>
+
+<!-- ================= CSS ================= -->
+/* File: css/styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.partners {
+  margin-bottom: 10px;
+}
+
+.partners img {
+  height: 80px;
+  margin: 10px;
+}
+
+.partners img {
+  height: 40px;
+  margin: 10px;
+}
