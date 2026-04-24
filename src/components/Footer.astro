@@ -1,39 +1,62 @@
 ---
+const partners = [
+  {
+    name: "Partner 1",
+    logo: "/images/partner1.png",
+    url: "https://partner1.com"
+  },
+  {
+    name: "Partner 2",
+    logo: "/images/partner2.png",
+    url: "https://partner2.com"
+  },
+  {
+    name: "Partner 3",
+    logo: "/images/partner3.png",
+    url: "https://partner3.com"
+  }
+];
 ---
 
-<footer class="footer">
-  <div class="partners">
-    <a href="https://partner1.com" target="_blank">
-      <img src="/images/partner1.png" alt="Partner 1" />
-    </a>
-    <a href="https://partner2.com" target="_blank">
-      <img src="/images/partner2.png" alt="Partner 2" />
-    </a>
-    <a href="https://partner3.com" target="_blank">
-      <img src="/images/partner3.png" alt="Partner 3" />
-    </a>
-  </div>
+<footer class="site-footer">
+  <nav class="partner-links" aria-label="Partner links">
+    {partners.map((partner) => (
+      <a href={partner.url} target="_blank" rel="noopener noreferrer" aria-label={partner.name}>
+        <img src={partner.logo} alt={`${partner.name} logo`} />
+      </a>
+    ))}
+  </nav>
 </footer>
 
 <style>
-.footer {
-  background-color: #111;
-  color: #fff;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
+  .site-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    background: #111827;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+  }
 
-.partners {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
+  .partner-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-.partners img {
-  height: 40px;
-  object-fit: contain;
-}
+  .partner-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-links img {
+    display: block;
+    max-height: 42px;
+    max-width: 130px;
+    object-fit: contain;
+  }
 </style>

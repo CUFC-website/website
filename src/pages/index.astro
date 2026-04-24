@@ -4,31 +4,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="Welcome">
   <section class="hero">
-    <h1>Welcome to Our Website</h1>
-    <p>Your project starts here.</p>
+    <div class="hero-content">
+      <h1>Welcome to Our Website</h1>
+      <p>Your project starts here.</p>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
-.hero {
-  height: 100vh;
-  background-image: url('/images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
+  .hero {
+    min-height: calc(100vh - 90px);
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+      url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
+  .hero-content {
+    max-width: 760px;
+  }
 
-.hero p {
-  font-size: 1.2rem;
-}
+  .hero h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+  }
+
+  .hero p {
+    margin: 0;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+  }
 </style>
