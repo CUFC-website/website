@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: url("images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+    }
+
+    .page-overlay {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .main-logo {
+      max-width: min(420px, 80vw);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+    }
+
+    .footer {
+      width: 100%;
+      min-height: 110px;
+      background: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1rem 1rem;
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .footer-copy {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #d1d5db;
+      text-align: center;
+    }
+
+    .partner-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      list-style: none;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .partner-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .partner-link:hover,
+    .partner-link:focus-visible {
+      transform: translateY(-2px);
+      opacity: 0.85;
+      outline: none;
+    }
+
+    .partner-logo {
+      max-height: 48px;
+      max-width: 160px;
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    @media (max-width: 640px) {
+      .footer {
+        min-height: 120px;
+      }
+
+      .partner-list {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .partner-logo {
+        max-height: 38px;
+        max-width: 120px;
+      }
+
+      .page-overlay {
+        padding-bottom: 9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-overlay">
+    <img
+      class="main-logo"
+      src="images/main-logo.png"
+      alt="Main logo"
+    />
+  </main>
+
+  <footer class="footer" aria-label="Partner links">
+    <ul class="partner-list">
+      <li>
+        <a
+          class="partner-link"
+          href="https://www.partner-one.example"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Partner One website"
+        >
+          <img
+            class="partner-logo"
+            src="images/partner-one-logo.png"
+            alt="Partner One logo"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="partner-link"
+          href="https://www.partner-two.example"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Partner Two website"
+        >
+          <img
+            class="partner-logo"
+            src="images/partner-two-logo.png"
+            alt="Partner Two logo"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="partner-link"
+          href="https://www.partner-three.example"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Partner Three website"
+        >
+          <img
+            class="partner-logo"
+            src="images/partner-three-logo.png"
+            alt="Partner Three logo"
+          />
+        </a>
+      </li>
+    </ul>
+    <div class="footer-copy">© 2026 Your Company. All rights reserved.</div>
+  </footer>
+</body>
+</html>
