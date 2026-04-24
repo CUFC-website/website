@@ -27,10 +27,19 @@ footer {
 }
 
 .partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 10px;
+}
+
+.partners a {
+  display: flex;
+  align-items: center;
 }
 
 .partners img {
   height: 80px;
-  margin: 10px;
+  margin: 0;
 }
